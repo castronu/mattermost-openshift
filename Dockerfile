@@ -38,9 +38,9 @@ RUN apk add --no-cache \
 
 RUN mkdir -p /opt && \
     cd /opt && \
-    curl -LO -v https://releases.mattermost.com/${MATTERMOST_VERSION}/mattermost-team-${MATTERMOST_VERSION}-linux-amd64.tar.gz && \
-    tar xf mattermost-team-${MATTERMOST_VERSION}-linux-amd64.tar.gz &&\
-    rm mattermost-team-${MATTERMOST_VERSION}-linux-amd64.tar.gz
+    curl -LO -v https://releases.mattermost.com/${MATTERMOST_VERSION}/mattermost-${MATTERMOST_VERSION}-linux-amd64.tar.gz && \
+    tar xf mattermost-${MATTERMOST_VERSION}-linux-amd64.tar.gz &&\
+    rm mattermost-${MATTERMOST_VERSION}-linux-amd64.tar.gz
 
 COPY config.json /opt/mattermost/config/config.json
 
