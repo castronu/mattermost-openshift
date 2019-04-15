@@ -53,6 +53,10 @@ RUN chmod 777 /opt/mattermost/config/config.json && \
 RUN addgroup -g ${PGID} mattermost \
     && adduser -D -u ${PUID} -G mattermost -h /opt/mattermost -D mattermost
 
+RUN apk update
+
+RUN apk add busybox-extras
+
 USER 2000
 
 EXPOSE 8065
