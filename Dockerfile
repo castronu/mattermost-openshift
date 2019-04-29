@@ -34,6 +34,7 @@ RUN apk add --no-cache \
 	mailcap \
 	netcat-openbsd \
 	xmlsec-dev \
+	openldap-clients \
 	&& rm -rf /tmp/*
 
 RUN mkdir -p /opt && \
